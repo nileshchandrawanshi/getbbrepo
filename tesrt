@@ -6,3 +6,10 @@ curl --request GET \ --url 'https://api.bitbucket.org/2.0/repositories/{workspac
 
 
 curl -X GET --user {Username}:{AppPassword} https://api.bitbucket.org/2.0/repositories/{WorkspaceID}
+
+
+echo "$response" | jq -r '.values[] | "\(.slug) \(.project.name)"' | while read -r repo_slug project_name; do
+
+
+echo "Project: $project_name"
+
