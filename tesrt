@@ -1,6 +1,1 @@
-get_repositories() {
-    response=$(curl -s -u "x-token-auth:${API_TOKEN}" "${BASE_URL}?pagelen=100")
-    echo "Response from API:" # Debugging line
-    echo "$response" | jq '.'  # Print the entire response
-    echo "$response" | jq -r '.values[] | .slug'
-}
+curl -s -u "x-token-auth:your_app_password" "https://api.bitbucket.org/2.0/repositories/test-salma?q=project.key=\"test-repo\""
