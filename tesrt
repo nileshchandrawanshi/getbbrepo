@@ -1,1 +1,5 @@
 curl -s -u "x-token-auth:your_app_password" "https://api.bitbucket.org/2.0/repositories/test-salma?q=project.key=\"test-repo\""
+
+
+
+curl --request GET \ --url 'https://api.bitbucket.org/2.0/repositories/{workspaceID}?q=project.key%3D%22{ProjectKey}%22' \ --user {username}:{AppPassword}
