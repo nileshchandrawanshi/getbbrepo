@@ -1,0 +1,6 @@
+get_repositories() {
+    response=$(curl -s -u "x-token-auth:${API_TOKEN}" "${BASE_URL}?pagelen=100")
+    echo "Response from API:" # Debugging line
+    echo "$response" | jq '.'  # Print the entire response
+    echo "$response" | jq -r '.values[] | .slug'
+}
