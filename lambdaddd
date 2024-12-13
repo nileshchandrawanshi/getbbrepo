@@ -1,0 +1,19 @@
+def process_rss_feed():
+
+
+
+# Lambda handler function
+def lambda_handler(event, context):  # Added for Lambda
+    try:
+        print("Starting RSS feed processing...")
+        process_rss_feed()  # Call the RSS feed processing function
+        return {
+            "statusCode": 200,
+            "body": "RSS feed processing completed successfully."
+        }
+    except Exception as e:
+        print(f"Error occurred: {str(e)}")
+        return {
+            "statusCode": 500,
+            "body": f"Error occurred: {str(e)}"
+        }
